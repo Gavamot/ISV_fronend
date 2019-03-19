@@ -1,4 +1,5 @@
 const path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const PATHS = {
     source: path.join(__dirname, 'src'),
@@ -6,6 +7,12 @@ const PATHS = {
 };
 
 module.exports = {
+    watch: true,
+    watchOptions: {
+        aggregateTimeout: 300,
+        poll: 1000,
+        ignored: /node_modules/
+    },
     mode: 'development',
     entry: {
         pageIndex: path.join(PATHS.source , 'index.js') ,
@@ -15,19 +22,12 @@ module.exports = {
         path: PATHS.build,
         filename: '[name].js'
     },
-    devServer: {
-        // Display only errors to reduce the amount of output.
-        stats: "errors-only",
-    
-        // Parse host and port from env to allow customization.
-        //
-        // If you use Docker, Vagrant or Cloud9, set
-        // host: "0.0.0.0";
-        //
-        // 0.0.0.0 is available to all network devices
-        // unlike default `localhost`.
-        host: process.env.HOST, // Defaults to `localhost`
-        port: process.env.PORT, // Defaults to 8080
-        open: true, // Open the page in browser
-      },
+    module: {
+        rules: [
+          {
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader'],
+          },
+        ],
+    }
 };

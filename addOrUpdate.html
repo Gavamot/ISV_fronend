@@ -6,12 +6,41 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container my-block">
+            <a class="btn btn-primary" href="index.html">Comeback</a>
+        </div>
+        <div class="container my-block">
+            <h4>Create Invoice</h4>
+            <form id="m_form">
+                <div class="form-group">
+                    <label for="number">Number:</label>
+                    <input required type="text" class="form-control" name='number' id="number" placeholder="INV-00000002">
+                </div>
+                <div class="form-group">
+                    <label for="date_created">Invoice Date:</label>
+                    <input required type="date" class="form-control" name='date_created' id="date_created" placeholder="Select date">
+                </div>
+                <div class="form-group">
+                    <label for="date_supply">Supply Date:</label>
+                    <input required type="date" class="form-control" name='date_supply' id="date_supply" placeholder="Select date">
+                </div>
+                <div class="form-group">
+                    <label for="comment">Comment:</label>
+                    <textarea rows="5" class="form-control" name='comment' id="comment" placeholder=""></textarea>
+                </div>
+            </form>
+            <button id='btn_save' class="btn btn-primary">Save</button>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="build/pageAddOrUpdate.js"></script>
-</head>
-<body>
-    <a href="index.html">Назад</a>
+
 </body>
 </html>

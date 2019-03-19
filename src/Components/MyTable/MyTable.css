@@ -1,0 +1,4 @@
+.my-table tr td:first-child{ 
+    display: none;
+}
+

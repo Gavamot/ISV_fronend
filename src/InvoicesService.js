@@ -1,34 +1,40 @@
 export default class InvoicesService {
-
-    constructor(source){
-        this.source = source;
-    }
-  
-    _getUrl(end) {
-        return end + this.source;
+    constructor(){
+        this.source = 'http://localhost:3000/invoices/';
     }
 
-    getAll(){
-        return fetch(_getUrl('')).then((response) => {
-            if (response.headers.get("content-type") != "application/json") {
-              throw new TypeError();
-            }
-            var j = response.json();
-            // можем что-нибудь делать с j
-            return j; // в случае выполнения обещания, значение
-                      // передается в fetch_current_data().then()
-          });
+    async getAll(){
+        let response = await fetch(this.source);
+        if(response.status === 200){
+            return await response.json();
+        }
     }
 
-    getById(id){
-
+    async getById(id){
+        let response = await fetch(`${this.source}/${id}`);
+        if(response.status === 200){
+            return await response.json();
+        }
     }
 
-    addOrUpdate(invoice){
-        
+    async addOrUpdate(invoice){
+        let method = 'POST';
+        let url = `${this.source}`;
+        if(invoice.id){
+            method = "PUT";
+            url +=`/${invoice.id}`;
+       }else{
+           delete invoice.id;
+       }
+        console.log(method, url, invoice)
+        var response = await fetch(url, { method: method, headers: {
+            'Content-Type': 'application/json'
+          }, body: JSON.stringify(invoice) });
+        return response.status === 200;
     }
 
-    delete(id){
-
+    async delete(id){
+       var response = await fetch(`${this.source}/${id}`, { method: 'DELETE'});
+       return response.status === 200;
     }
 }
