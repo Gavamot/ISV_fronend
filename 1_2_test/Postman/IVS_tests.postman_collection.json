@@ -1,0 +1,102 @@
+{
+	"variables": [],
+	"info": {
+		"name": "IVS_tests",
+		"_postman_id": "1bbb9659-7830-29e2-abcb-07e3634cda48",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAll",
+			"request": {
+				"url": " http://127.0.0.1:3000/invoices/5ac1f09a104dfc9b0b85b02f",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetById",
+			"request": {
+				"url": " http://127.0.0.1:3000/invoices",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"5ac1f888104dfc9b0b85b021\",\n  \"direction\": \"bee33a4c-e0cf-4f2c-80b5-93ccab966e46\",\n  \"number\": 39805,\n  \"date_created\": \"22 March 1971\",\n  \"date_due\": \"15 January 1991\",\n  \"date_supply\": \"21 October 2014\",\n  \"comment\": \"Conrewrwerwersequat fugiat ut et dolore id fugiat voluptate qui consectetur. Tempor ad aliqua aute deserunt et cillum exercitation proident minim cupidatat sunt pariatur. Duis excepteur dolore exercitation magna consequat ut.\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add",
+			"request": {
+				"url": " http://127.0.0.1:3000/invoices",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"5ac1f888104dfc9b0b85b021\",\n  \"direction\": \"bee33a4c-e0cf-4f2c-80b5-93ccab966e46\",\n  \"number\": 39805,\n  \"date_created\": \"22 March 1971\",\n  \"date_due\": \"15 January 1991\",\n  \"date_supply\": \"21 October 2014\",\n  \"comment\": \"Conrewrwerwersequat fugiat ut et dolore id fugiat voluptate qui consectetur. Tempor ad aliqua aute deserunt et cillum exercitation proident minim cupidatat sunt pariatur. Duis excepteur dolore exercitation magna consequat ut.\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"url": " http://127.0.0.1:3000/invoices",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"5ac1f888104dfc9b0b85b021\",\n  \"direction\": \"bee33a4c-e0cf-4f2c-80b5-93ccab966e46\",\n  \"number\": 39805,\n  \"date_created\": \"22 March 1971\",\n  \"date_due\": \"15 January 1991\",\n  \"date_supply\": \"21 October 2014\",\n  \"comment\": \"Conrewrwerwersequat fugiat ut et dolore id fugiat voluptate qui consectetur. Tempor ad aliqua aute deserunt et cillum exercitation proident minim cupidatat sunt pariatur. Duis excepteur dolore exercitation magna consequat ut.\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"url": " http://127.0.0.1:3000/invoices",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"5ac1f888104dfc9b0b85b021\",\n  \"direction\": \"bee33a4c-e0cf-4f2c-80b5-93ccab966e46\",\n  \"number\": 39805,\n  \"date_created\": \"22 March 1971\",\n  \"date_due\": \"15 January 1991\",\n  \"date_supply\": \"21 October 2014\",\n  \"comment\": \"Conrewrwerwersequat fugiat ut et dolore id fugiat voluptate qui consectetur. Tempor ad aliqua aute deserunt et cillum exercitation proident minim cupidatat sunt pariatur. Duis excepteur dolore exercitation magna consequat ut.\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
